@@ -1,50 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GigGuard</title>
+    <title>GigGuard - Empower Every Gig Worker</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="importmap">
-    {
-      "imports": {
-        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-        "react/": "https://aistudiocdn.com/react@^19.2.1/",
-        "react": "https://aistudiocdn.com/react@^19.2.1",
-        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-        "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
-      }
-    }
-    </script>
-    <style>
-      @keyframes fade-in {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-      @keyframes slide-up {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-      @keyframes slide-in-right {
-        from { transform: translateX(20px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      @keyframes floatParticle {
-        0% { transform: translate(0, 0); opacity: 0.4; }
-        50% { transform: translate(20px, -20px); opacity: 0.9; }
-        100% { transform: translate(0, 0); opacity: 0.4; }
-      }
-      .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
-      .animate-slide-up { animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      .animate-slide-in-right { animation: slide-in-right 0.4s ease-out forwards; }
-      .animate-delay-100 { animation-delay: 100ms; }
-      .animate-delay-200 { animation-delay: 200ms; }
-      .animate-delay-300 { animation-delay: 300ms; }
-    </style>
-  </head>
-  <body class="bg-sky-50 font-sans antialiased selection:bg-sky-200 selection:text-sky-900">
-    <div id="root"></div>
-    <script type="module" src="./src/index.tsx"></script>     
-      </body>
+</head>
+<body class="bg-gradient-to-br from-sky-50 to-blue-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                🛡️ GigGuard
+            </div>
+            <div class="flex gap-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Empower Every Gig Worker</h1>
+        <p class="text-xl text-gray-700 mb-8">GigGuard provides health, safety, and legal protection for part-time workers and freelancers</p>
+        <div class="flex gap-4 justify-center">
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">Get Started</button>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition font-semibold">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-red-50 py-16 my-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">❌ The Problems Gig Workers Face</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">🏥</div>
+                    <h3 class="font-bold text-lg mb-2">No Health Insurance</h3>
+                    <p class="text-gray-700">Part-time workers lack basic health coverage and insurance benefits</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">🚫</div>
+                    <h3 class="font-bold text-lg mb-2">No Facilities</h3>
+                    <p class="text-gray-700">Missing workplace facilities, safety measures, and support systems</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">⚖️</div>
+                    <h3 class="font-bold text-lg mb-2">No Legal Rights</h3>
+                    <p class="text-gray-700">Unaware of labor laws and unable to protect their legal interests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-green-50 py-16 my-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">✅ Our Solution: GigGuard</h2>
+            <p class="text-lg text-gray-700 mb-8">A comprehensive app designed to protect and empower gig workers with comprehensive tools and resources</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">⭐ Key Features</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">💰</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Income Tracking</h3>
+                <p class="text-gray-700">Track earnings from multiple gig platforms in one place. Get insights into your income patterns and optimize earning opportunities</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">🆘</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Safety Beacon (SOS)</h3>
+                <p class="text-gray-700">One-touch emergency alert system. Instantly notify trusted contacts and authorities in case of danger while working</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">🏥</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Health AI Assistant</h3>
+                <p class="text-gray-700">Get personalized health tips, preventive care advice, and wellness tracking tailored for gig workers</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">⚖️</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Labour Laws Guide</h3>
+                <p class="text-gray-700">Know your legal rights and responsibilities. Access easy-to-understand labor law information by location</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">🚀</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Career Empowerment</h3>
+                <p class="text-gray-700">Access training resources, skill development courses, and mentorship opportunities to grow your career</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-3">👥</div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Community Network</h3>
+                <p class="text-gray-700">Connect with other gig workers, share experiences, get support, and build a strong community network</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="bg-blue-50 py-16 my-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">🎯 Why Choose GigGuard?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Comprehensive Protection</h3>
+                        <p class="text-gray-700">All-in-one solution for health, safety, and legal needs of gig workers</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Easy to Use</h3>
+                        <p class="text-gray-700">Simple, intuitive interface designed specifically for busy gig workers</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Available Everywhere</h3>
+                        <p class="text-gray-700">Works offline and online, supporting workers across all regions and gig platforms</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Free & Affordable</h3>
+                        <p class="text-gray-700">Designed for gig workers with flexible pricing and free core features</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 text-center">
+        <h2 class="text-3xl font-bold mb-4">Join Thousands of Gig Workers Today</h2>
+        <p class="text-lg mb-8">Protect yourself. Know your rights. Grow your career.</p>
+        <button class="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">Download GigGuard Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-white mb-4">GigGuard</h3>
+                    <p class="text-sm">Empowering gig workers with protection and opportunity</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Product</h3>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Company</h3>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Legal</h3>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms</a></li>
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>Made with ❤️ for Gig Workers | HPSK, Kadapa | Hyderabad Public School</p>
+                <p class="mt-2">© 2025 GigGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
